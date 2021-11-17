@@ -24,10 +24,10 @@ checkmarx-scan:
     - >-
       /app/bin/cx
       scan create
-      --project-name ${PROJECT_NAME}
-      -s .
-      --format json
-      --branch ${BRANCH_NAME} 
-      --agent Gitlab 
+      --project-name '${PROJECT_NAME}'
+      -s '.'
+      --format 'json'
+      --branch '${BRANCH_NAME} 
+      --agent 'Gitlab' 
       --filters '${FILE_FILTERS}'
       $(echo ${ADDITIONAL_PARAMS} | tr -d '"');
