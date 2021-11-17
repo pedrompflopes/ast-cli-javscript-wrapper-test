@@ -25,9 +25,9 @@ checkmarx-scan:
       /app/bin/cx
       scan create
       --project-name '${PROJECT_NAME}'
-      -s '.'
+      --file-source '.'
       --format 'json'
       --branch '${BRANCH_NAME} 
       --agent 'Gitlab' 
-      --filters '${FILE_FILTERS}'
+      --file-filter '${FILE_FILTERS}'
       $(echo ${ADDITIONAL_PARAMS} | tr -d '"');
