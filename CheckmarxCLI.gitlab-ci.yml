@@ -29,5 +29,5 @@ checkmarx-scan:
       --format json
       --branch ${BRANCH_NAME} 
       --agent Gitlab 
-      -f ${FILE_FILTERS}
+      -f '${FILE_FILTERS}'
       $(echo ${ADDITIONAL_PARAMS} | tr -d '"');
