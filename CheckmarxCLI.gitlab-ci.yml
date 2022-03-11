@@ -29,5 +29,4 @@ checkmarx-scan:
       --file-source '.'
       --branch ${BRANCH_NAME}
       --agent 'Gitlab' 
-      --file-filter "${FILE_FILTERS}"
       "${arr[@]}"
