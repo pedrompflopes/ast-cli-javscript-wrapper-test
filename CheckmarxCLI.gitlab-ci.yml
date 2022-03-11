@@ -22,6 +22,7 @@ checkmarx-scan:
     entrypoint: ['']
   script:
     - >-
+      eval "arr=(${ADDITIONAL_PARAMS})"
       /app/bin/cx
       scan create
       --project-name ${PROJECT_NAME}
@@ -29,4 +30,4 @@ checkmarx-scan:
       --branch ${BRANCH_NAME}
       --agent 'Gitlab' 
       --file-filter "${FILE_FILTERS}"
-      $(echo ${ADDITIONAL_PARAMS} | tr -d '"');
+      "${arr[@]}"
