@@ -26,7 +26,6 @@ checkmarx-scan:
       scan create
       --project-name ${PROJECT_NAME}
       --file-source '.'
-      --format 'json'
       --branch ${BRANCH_NAME}
       --agent 'Gitlab' 
       --file-filter "${FILE_FILTERS}"
