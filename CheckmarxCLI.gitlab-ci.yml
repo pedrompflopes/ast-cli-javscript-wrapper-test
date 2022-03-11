@@ -23,6 +23,7 @@ checkmarx-scan:
   script:
     - >-
       eval "arr=(${ADDITIONAL_PARAMS})"
+      echo "${arr[@]}"
       /app/bin/cx
       scan create
       --project-name ${PROJECT_NAME}
