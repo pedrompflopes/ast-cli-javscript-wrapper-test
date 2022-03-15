@@ -21,9 +21,9 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
+    - eval "arr=(${ADDITIONAL_PARAMS})"
+    - echo "${arr[@]}"
     - >-
-      eval "arr=(${ADDITIONAL_PARAMS})"
-      echo "${arr[@]}"
       /app/bin/cx
       scan create
       --project-name ${PROJECT_NAME}
