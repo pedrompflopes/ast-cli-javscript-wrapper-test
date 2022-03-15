@@ -21,8 +21,8 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - echo "${ADDITIONAL_PARAMS[@]}"
-    - echo "test"
+    - eval "args=(${ADDITIONAL_PARAMS})"
+    - echo $args
     - >-
       /app/bin/cx
       scan create
@@ -30,4 +30,4 @@ checkmarx-scan:
       --file-source '.'
       --branch ${BRANCH_NAME}
       --agent 'Gitlab' 
-      ${ADDITIONAL_PARAMS[@]}
+      $args
