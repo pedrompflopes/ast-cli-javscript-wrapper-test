@@ -23,6 +23,7 @@ checkmarx-scan:
   script:
     - eval "arr=(${ADDITIONAL_PARAMS})"
     - echo "${arr[@]}"
+    - echo "test"
     - >-
       /app/bin/cx
       scan create
