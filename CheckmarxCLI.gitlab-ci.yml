@@ -29,5 +29,5 @@ checkmarx-scan:
       --project-name ${PROJECT_NAME}
       --file-source '.'
       --branch ${BRANCH_NAME}
-      --agent 'Gitlab' 
+      --agent 'Gitlab'
       "${args[@]}"
