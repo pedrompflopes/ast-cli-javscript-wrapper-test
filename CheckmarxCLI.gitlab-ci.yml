@@ -22,7 +22,7 @@ checkmarx-scan:
     entrypoint: ['']
   script:
     - eval "arr=(${ADDITIONAL_PARAMS})"
-    - echo "${arr[@]}"
+    - echo $arr[@]
     - echo "test"
     - >-
       /app/bin/cx
@@ -31,4 +31,4 @@ checkmarx-scan:
       --file-source '.'
       --branch ${BRANCH_NAME}
       --agent 'Gitlab' 
-      "${arr[@]}"
+      "$arr[@]"
